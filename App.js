@@ -12,7 +12,7 @@ import Svg, { Polyline } from "react-native-svg";
 const Whiteboard = () => {
   const [lines, setLines] = useState([]);
   const [currentLine, setCurrentLine] = useState([]);
-  const [currentColor, setCurrentColor] = useState("black"); // Default color
+  const [currentColor, setCurrentColor] = useState("black"); 
 
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
@@ -28,17 +28,17 @@ const Whiteboard = () => {
     },
   });
 
-  // Function to clear the whiteboard
+
   const clearBoard = () => {
     setLines([]);
   };
 
-  // Function to undo the last action
+
   const undoLastAction = () => {
     setLines(lines.slice(0, -1));
   };
 
-  // Function to render color selection buttons
+
   const renderColorButtons = () => {
     const colors = ["black", "red", "blue", "green", "yellow"];
 
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "white",
-    justifyContent: "space-between", // Ensure the controls are at the bottom
+    justifyContent: "space-between",
   },
   whiteboard: {
     flex: 1,
@@ -106,10 +106,10 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   colorButton: {
-    width: width * 0.08, // Responsive width
-    height: width * 0.08, // Responsive height
-    borderRadius: (width * 0.08) / 2, // Circle button
-    marginHorizontal: width * 0.02, // Responsive margin
+    width: width * 0.08,
+    height: width * 0.08,
+    borderRadius: (width * 0.08) / 2, 
+    marginHorizontal: width * 0.02, 
     borderWidth: 2,
   },
   controls: {
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flexWrap: "wrap",
-    gap: 1, // Ensure buttons don't overflow
+    gap: 1,
   },
 });
 
