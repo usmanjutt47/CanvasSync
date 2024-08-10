@@ -12,7 +12,7 @@ import Svg, { Polyline } from "react-native-svg";
 const Whiteboard = () => {
   const [lines, setLines] = useState([]);
   const [currentLine, setCurrentLine] = useState([]);
-  const [currentColor, setCurrentColor] = useState("black"); 
+  const [currentColor, setCurrentColor] = useState("black");
 
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
@@ -28,16 +28,13 @@ const Whiteboard = () => {
     },
   });
 
-
   const clearBoard = () => {
     setLines([]);
   };
 
-
   const undoLastAction = () => {
     setLines(lines.slice(0, -1));
   };
-
 
   const renderColorButtons = () => {
     const colors = ["black", "red", "blue", "green", "yellow"];
@@ -108,8 +105,8 @@ const styles = StyleSheet.create({
   colorButton: {
     width: width * 0.08,
     height: width * 0.08,
-    borderRadius: (width * 0.08) / 2, 
-    marginHorizontal: width * 0.02, 
+    borderRadius: (width * 0.08) / 2,
+    marginHorizontal: width * 0.02,
     borderWidth: 2,
   },
   controls: {
